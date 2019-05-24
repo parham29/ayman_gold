@@ -1,0 +1,49 @@
+name: flutter_login_bloc
+description: A new Flutter application.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_bloc: ^0.13.0
+  meta: ^1.1.6
+  equatable: ^0.2.0
+  cupertino_icons: ^0.1.2
+  http: ^0.12.0+2
+  flutter_secure_storage: ^3.2.1+1
+  auto_size_text: ^1.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+#  assets:
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
