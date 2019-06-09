@@ -66,6 +66,7 @@ class _AppState extends State<App> {
     return BlocProvider<AuthenticationBloc>(
       bloc: _authenticationBloc,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         localizationsDelegates: [
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
