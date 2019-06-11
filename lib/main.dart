@@ -67,6 +67,7 @@ class _AppState extends State<App> {
       bloc: _authenticationBloc,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+        theme: ThemeData(fontFamily: 'AllCrackedOut'),
         localizationsDelegates: [
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,

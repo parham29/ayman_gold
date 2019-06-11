@@ -18,13 +18,29 @@ dependencies:
   http: ^0.12.0+2
   flutter_secure_storage: ^3.2.1+1
   auto_size_text: ^1.1.2
+  flutter_launcher_icons: ^0.7.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
+  assets:
+    - icon/icon.png
+    - icon/ring.png
   uses-material-design: true
+  fonts:
+    - family: AllCrackedOut
+      fonts:
+        - asset: fonts/Gandom.ttf
+
+flutter_icons:
+  image_path: "icon/icon.png"
+  android: true
+  ios: true
+
+
+
 #  assets:
 
   

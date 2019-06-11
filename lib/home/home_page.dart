@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: Card(
                         margin: EdgeInsets.only(right: 10, left: 10, top: 10),
-                        color: Color(0xffFFFAE5),
+                        color: Color(0xfffeb204),
                         elevation: 5,
                         child: Container(
                           padding: const EdgeInsets.all(5.0),
@@ -124,8 +124,8 @@ class _HomePageState extends State<HomePage> {
                             children: <Widget>[
                               CircleAvatar(
                                 backgroundColor: Colors.transparent,
-                                backgroundImage: NetworkImage(
-                                    "https://cdn3.iconfinder.com/data/icons/award-stickers/512/Diamond-512.png"),
+                                backgroundImage:  AssetImage(
+                                    'icon/ring.png'),
                               ),
                               Flexible(
                                   child: new Container(
@@ -154,6 +154,7 @@ class _HomePageState extends State<HomePage> {
         elevation: 4.0,
         icon: const Icon(Icons.add),
         label: const Text('اضافه کردن سفارش'),
+        backgroundColor: Color(0xffff8503),
         onPressed: () {
           navigateToSubPage(context);
         },
