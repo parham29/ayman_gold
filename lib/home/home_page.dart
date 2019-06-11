@@ -7,7 +7,7 @@ import 'package:flutter_login_bloc/authentication/authentication.dart';
 import 'package:flutter_login_bloc/form/form.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
-import 'package:sweet_alert_dialogs/sweet_alert_dialogs.dart';
+import 'package:flutter_alert/flutter_alert.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -86,31 +86,21 @@ class _HomePageState extends State<HomePage> {
                     return GestureDetector(
                       onTap: () {
                         if ((orders[index]["ready_date"]) == "0") {
-                          showDialog(
-                              context: context,
-                              builder: (BuildContext context) {
-                                return RichAlertDialog(
-                                  alertTitle: richTitle("مطمئن هستید؟!"),
-                                  alertSubtitle: richSubtitle(
-                                      "پس از تایید سفارش شما حذف خواهد شد"),
-                                  alertType: RichAlertType.WARNING,
-                                  actions: <Widget>[
-                                    FlatButton(
-                                      child: Text("بله"),
-                                      onPressed: () {
-                                        delete(orders[index]["id"]);
-                                        Navigator.pop(context);
-                                      },
-                                    ),
-                                    FlatButton(
-                                      child: Text("خیر"),
-                                      onPressed: () {
-                                        Navigator.pop(context);
-                                      },
-                                    ),
-                                  ],
-                                );
-                              });
+                          showAlert(
+                            context: context,
+                            title: "مطمئن هستید؟!",
+                            body: "سفارش شما پس از تایید حذف خواهد شد.",
+                            actions: [
+                              AlertAction(
+                                text: "حذف",
+                                isDestructiveAction: true,
+                                onPressed: () {
+                                  delete(orders[index]["id"]);
+                                },
+                              ),
+                            ],
+                            cancelable: true,
+                          );
                         }
                       },
                       child: Card(
