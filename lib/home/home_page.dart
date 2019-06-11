@@ -100,7 +100,6 @@ class _HomePageState extends State<HomePage> {
                                       onPressed: () {
                                         delete(orders[index]["id"]);
                                         Navigator.pop(context);
-
                                       },
                                     ),
                                     FlatButton(
@@ -116,16 +115,15 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: Card(
                         margin: EdgeInsets.only(right: 10, left: 10, top: 10),
-                        color: Color(0xfffeb204),
+                        color: Color(0xffF1E2DD),
                         elevation: 5,
                         child: Container(
                           padding: const EdgeInsets.all(5.0),
                           child: Row(
                             children: <Widget>[
-                              CircleAvatar(
-                                backgroundColor: Colors.transparent,
-                                backgroundImage:  AssetImage(
-                                    'icon/ring.png'),
+                              Image(
+                                height: 45,
+                                image: AssetImage('icon/rings.png'),
                               ),
                               Flexible(
                                   child: new Container(
@@ -154,7 +152,7 @@ class _HomePageState extends State<HomePage> {
         elevation: 4.0,
         icon: const Icon(Icons.add),
         label: const Text('اضافه کردن سفارش'),
-        backgroundColor: Color(0xffff8503),
+        backgroundColor: Color(0xffA06D5A),
         onPressed: () {
           navigateToSubPage(context);
         },

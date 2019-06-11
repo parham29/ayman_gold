@@ -52,9 +52,10 @@ class _LoginFormState extends State<LoginForm> {
               children: [
                 Text('AYMAN GOLD',
                     style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.amber,
+                        fontSize: 25.0,
+                        color: Color(0xffFFC107),
                         fontStyle: FontStyle.italic,
+
                         fontWeight: FontWeight.bold)),
                 SizedBox(height: 20),
                 TextFormField(
@@ -83,9 +84,10 @@ class _LoginFormState extends State<LoginForm> {
                 ),
                 SizedBox(height: 20),
                 RaisedButton(
-                  color: Colors.red,
+                  color: Color(0xffA06D5A),
                   textColor: Colors.white,
                   onPressed: () {
+                    FocusScope.of(context).requestFocus(new FocusNode());
                     if (_formKey.currentState.validate()) {
                       if(state is LoginLoading){
 

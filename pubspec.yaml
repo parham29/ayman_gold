@@ -27,7 +27,7 @@ dev_dependencies:
 flutter:
   assets:
     - icon/icon.png
-    - icon/ring.png
+    - icon/rings.png
   uses-material-design: true
   fonts:
     - family: AllCrackedOut

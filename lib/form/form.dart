@@ -129,9 +129,10 @@ class SubmitForm extends State<form> {
                       ? ButtonTheme(
                     minWidth: 200.0,
                     child:  RaisedButton(
-                            color: Colors.green,
+                            color: Color(0xffA06D5A),
                             textColor: Colors.white,
                             onPressed: () {
+                              FocusScope.of(context).requestFocus(new FocusNode());
                               if (_formKey2.currentState.validate() &&
                                   _isDis == false) {
                                 setState(() {
