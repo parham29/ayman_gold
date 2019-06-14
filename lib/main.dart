@@ -67,13 +67,13 @@ class _AppState extends State<App> {
       bloc: _authenticationBloc,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(fontFamily: 'AllCrackedOut'),
+        theme: ThemeData(fontFamily: 'AllCrackedOut', platform: TargetPlatform.android),
         localizationsDelegates: [
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
         ],
         supportedLocales: [
-          Locale("fa", "IR"), // OR Locale('ar', 'AE') OR Other RTL locales
+          Locale("fa", "IR"),
         ],
         locale: Locale("fa", "IR"),
 
