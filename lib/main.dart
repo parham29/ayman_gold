@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_login_bloc/authentication/authentication.dart';
@@ -69,6 +70,7 @@ class _AppState extends State<App> {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(fontFamily: 'AllCrackedOut', platform: TargetPlatform.android),
         localizationsDelegates: [
+          const FallbackCupertinoLocalisationsDelegate(),
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
         ],
@@ -97,4 +99,19 @@ class _AppState extends State<App> {
       ),
     );
   }
+}
+
+class FallbackCupertinoLocalisationsDelegate
+  extends LocalizationsDelegate<CupertinoLocalizations> {
+  const FallbackCupertinoLocalisationsDelegate();
+
+  @override
+  bool isSupported(Locale locale) => true;
+
+  @override
+  Future<CupertinoLocalizations> load(Locale locale) =>
+  DefaultCupertinoLocalizations.load(locale);
+
+  @override
+  bool shouldReload(FallbackCupertinoLocalisationsDelegate old) => false;
 }
